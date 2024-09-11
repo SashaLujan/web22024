@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-09-2024 a las 00:01:54
+-- Tiempo de generación: 11-09-2024 a las 02:54:05
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -66,6 +66,19 @@ INSERT INTO `noticia` (`id_noticia`, `titulo`, `contenido`, `imagen`) VALUES
 (4, 'Starbucks se va del país y hay preocupación entre', 'Según el comunicado oficial \'debido a la crisis global que vive el sector, y la cantidad de pelotudos que ocupan mesas durante 8 horas con un café y dos medialunas solamente para darse corte que tienen una MacBook, se hace inviables la continuidad de las operaciones en Argentina.', 'https://1.bp.blogspot.com/-HiD_vBlSbg0/X2PjR8udR5I/AAAAAAAAIvw/E3EWAortz7A3ZHIdTrOGHa7YGsf17ZUiQCLcBGAsYHQ/w640-h444/starbucks.jpg'),
 (5, 'Nueva noticia', 'Ut nec faucibus neque. Praesent dignissim ac ligula laoreet sollicitudin. Aliquam congue justo quis ligula porttitor pulvinar. Curabitur vel laoreet lectus. Maecenas egestas suscipit sem id ornare.', 'https://1.bp.blogspot.com/-HiD_vBlSbg0/X2PjR8udR5I/AAAAAAAAIvw/E3EWAortz7A3ZHIdTrOGHa7YGsf17ZUiQCLcBGAsYHQ/w640-h444/starbucks.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id_usuario` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `contraseña` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tablas volcadas
 --
@@ -75,6 +88,22 @@ INSERT INTO `noticia` (`id_noticia`, `titulo`, `contenido`, `imagen`) VALUES
 --
 ALTER TABLE `noticia`
   ADD PRIMARY KEY (`id_noticia`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

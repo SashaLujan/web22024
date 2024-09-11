@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2024-09-04 01:33:56
+/* Smarty version 3.1.34-dev-7, created on 2024-09-11 02:21:11
   from 'C:\xampp\htdocs\web22024\diarioDigital\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_66d79ce4c0b811_62429777',
+  'unifunc' => 'content_66e0e277b9a776_51502137',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12c55e77689afcedc540a6ca057e3fed6c402012' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web22024\\diarioDigital\\templates\\header.tpl',
-      1 => 1725406433,
+      1 => 1726014059,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66d79ce4c0b811_62429777 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e0e277b9a776_51502137 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
     <html lang="en">
         <head>
@@ -52,11 +52,11 @@ function content_66d79ce4c0b811_62429777 (Smarty_Internal_Template $_smarty_tpl)
                             <li class="nav-item">
                                 <a class="nav-link" href="showDevelopers">about</a>
                             </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="suscribirse">suscribirse</a>
+                            </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+
                     </div>
                 </div>
             </nav><?php }
