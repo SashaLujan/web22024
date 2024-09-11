@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2024-09-06 23:56:05
+/* Smarty version 3.1.34-dev-7, created on 2024-09-11 04:03:49
   from 'C:\xampp\htdocs\web22024\diarioDigital\templates\showNoticias.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_66db7a757c0185_85097004',
+  'unifunc' => 'content_66e0fa859314c2_59751596',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f1cc5747e333fc5ac3ed5eaafb8f4add23be21ba' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web22024\\diarioDigital\\templates\\showNoticias.tpl',
-      1 => 1725659762,
+      1 => 1726020226,
       2 => 'file',
     ),
   ),
@@ -22,12 +22,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_66db7a757c0185_85097004 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e0fa859314c2_59751596 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <div>
-   <h4>Noticias</h4>
+   <h4 class="blockquote">Noticias</h4>
 </div>
 <div class="container mt-5">
     <div class="noticias">

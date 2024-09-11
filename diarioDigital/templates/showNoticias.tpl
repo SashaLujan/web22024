@@ -1,7 +1,7 @@
 {include 'header.tpl'}
 
 <div>
-   <h4>Noticias</h4>
+   <h4 class="blockquote">Noticias</h4>
 </div>
 <div class="container mt-5">
     <div class="noticias">
