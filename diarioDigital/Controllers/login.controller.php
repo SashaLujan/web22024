@@ -17,15 +17,15 @@ class LoginController
     //agrega un suscriptor
     public function addUser()
     {
-        if (empty($_POST['nombre']) || empty($_POST['email']) || empty($_POST['contraseña']) || empty($_POST['confirmarContraseña'])) {
+        if (empty($_POST['nombre']) || empty($_POST['email']) || empty($_POST['contrasenia']) || empty($_POST['repitaContrasenia'])) {
             $this->viewPublic->formCheck("Todos los datos son obligatorios");
         } else {
             $nombre = $_POST['nombre'];
-            $username = $_POST['email'];
-            $password = $_POST['contraseña'];
-            $repitPassword = $_POST['confirmarContraseña'];
+            $email = $_POST['email'];
+            $password = $_POST['contrasenia'];
+            $repitPassword = $_POST['repitaContrasenia'];
             
-            $user = $this->modelLogin->getAdmin($username);
+            $user = $this->modelLogin->getAdmin($email);
             if ($user) {
                 $this->viewPublic->formCheck("El usuario ya esta registrado");
             } else {
@@ -33,13 +33,13 @@ class LoginController
                     $this->viewPublic->formCheck("Las contraseñas no coinciden");
                 } else {
                     $passwordCifrado = password_hash($password, PASSWORD_DEFAULT);
-                    $this->modelLogin->insert($nombre, $username, $passwordCifrado);
-                    $user = $this->modelLogin->getAdmin($username);
+                    $this->modelLogin->insert($nombre, $email, $passwordCifrado);
+                    $user = $this->modelLogin->getAdmin($email);
                     if (session_status() != PHP_SESSION_ACTIVE) {
                         session_start(); //Abro la sesion
                     }
                     $_SESSION['IS_LOGGED'] = true;
-                    $_SESSION['email'] = $username;  //Guardo el nombre de usuario
+                    $_SESSION['email'] = $email;  //Guardo el nombre de usuario
                     $_SESSION['ID'] = $user->id_usuario;
                     header('Location: ' . BASE_URL . 'home');
                 }

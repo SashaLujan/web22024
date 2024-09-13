@@ -12,15 +12,15 @@
             </div>
             <div class="col-12">
                 <label class="form-label">Ingresar contraseña</label>
-                <input class="form-control" type="password" name="contraseña">
+                <input class="form-control" type="password" name="contrasenia">
             </div>
             <div class="col-12">
                 <label class="form-label">Repetir contraseña</label>
-                <input class="form-control" type="password" name="repitaContraseña">
+                <input class="form-control" type="password" name="repitaContrasenia">
             </div> 
             <div class="col-12">
                 <button type="submit" class="btn btn-dark"><b>Suscribirse</b></button>
-                <a class="btn btn-dark" href="#"><b>Salir</b></a>
+    
             </div>
         </form>
     </div>

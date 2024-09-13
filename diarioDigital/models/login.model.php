@@ -10,22 +10,22 @@ class LoginModel{
         return $pdo;
     }
 
-    public function getAdmin($username){
+    public function getAdmin($email){
         // 1. abro la conexión con MySQL 
         $db = $this->createConection();
         // 2. enviamos la consulta (3 pasos)
         $sentencia = $db->prepare("SELECT * FROM usuarios WHERE email = ?"); // prepara la consulta
-        $sentencia->execute([$username]); // ejecuta
+        $sentencia->execute([$email]); // ejecuta
         $administrador = $sentencia->fetch(PDO::FETCH_OBJ); // obtiene la respuesta
         return $administrador;
     }
 
     //inserta un usuario nuevo
-    public function insert($nombre,$username,$contraseña){
+    public function insert($nombre,$email,$contraseña){
          // 1. abro la conexión con MySQL
          $db = $this->createConection();
          // 2. enviamos la consulta (3 pasos)
-         $sentencia = $db->prepare("INSERT INTO usuaios (nombre, email, contraseña) VALUES (?,?,?)");// prepara la consulta
-         return $sentencia->execute([$nombre, $username, $contraseña]);
+         $sentencia = $db->prepare("INSERT INTO usuarios (nombre, email, contraseña) VALUES (?,?,?)");// prepara la consulta
+         return $sentencia->execute([$nombre, $email, $contraseña]);
     }
 }
